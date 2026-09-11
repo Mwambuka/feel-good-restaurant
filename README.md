@@ -37,3 +37,15 @@ Free delivery contact: **0798904755** by call or WhatsApp.
 ```powershell
 npm test
 ```
+
+## CodeRabbit reviews
+
+CodeRabbit CLI is installed and authenticated for the local developer account. From this repository, run:
+
+```powershell
+npm run review:changes
+```
+
+Use `npm run review` for tracked changes, including committed changes. The repository configuration is in `.coderabbit.yaml`.
+
+For automatic reviews on GitHub pull requests, add `Mwambuka/feel-good-restaurant` from the CodeRabbit repository settings page: <https://app.coderabbit.ai/settings/repositories>. After that, opening or updating a PR will trigger CodeRabbit according to `.coderabbit.yaml`.

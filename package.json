@@ -7,6 +7,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
+    "review": "cr review",
+    "review:changes": "cr review --uncommitted --include-untracked",
     "test": "node --test test/api.test.js"
   },
   "dependencies": {

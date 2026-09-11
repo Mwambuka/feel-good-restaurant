@@ -1,0 +1,39 @@
+language: "en-US"
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  review_status: true
+  review_details: true
+  auto_review:
+    enabled: true
+    drafts: false
+    auto_incremental_review: true
+  path_filters:
+    - "!data/**"
+    - "!test/*.sqlite*"
+    - "!node_modules/**"
+  path_instructions:
+    - path: "src/**/*.js"
+      instructions: >
+        Prioritize authentication and authorization correctness, JWT handling,
+        password security, SQL injection safety, input validation, transaction
+        boundaries, error handling, and API compatibility. Check that tests
+        cover behavior changes.
+    - path: "public/**/*.{js,html,css}"
+      instructions: >
+        Prioritize accessibility, responsive behavior, XSS-safe rendering,
+        reliable API error states, and preserving the user flows for sign-in,
+        ordering, delivery, and reservations.
+    - path: "test/**/*.js"
+      instructions: >
+        Check that tests are deterministic, isolate their database state, and
+        assert meaningful success and failure behavior.
+chat:
+  auto_reply: true
+knowledge_base:
+  code_guidelines:
+    enabled: true
+    filePatterns:
+      - "README.md"
+      - ".github/copilot-instructions.md"
