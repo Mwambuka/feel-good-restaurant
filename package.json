@@ -1,0 +1,20 @@
+{
+  "name": "feel-good-restaurant-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "REST API for Feel Good Restaurant",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/api.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^12.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

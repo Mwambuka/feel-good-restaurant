@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17251f">
+  <title>Feel Good | Food, fun, and easy evenings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Feel Good home"><span class="brand-mark">FG</span><span>feel good</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#menu">Menu</a><a href="#experiences">Experiences</a><a href="#reserve">Reserve</a>
+    </nav>
+    <div class="top-actions"><a class="phone-link" href="tel:0798904755">0798 904 755</a><button class="outline-button" id="login-button">Sign in</button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Good food. Easy energy.</p>
+        <h1>Come as you are.<br><em>Stay for the feeling.</em></h1>
+        <p class="hero-text">A warm table for everyday eating, late dates, big games, movie nights, and the kind of evenings you do not want to rush.</p>
+        <div class="hero-actions"><a class="primary-button" href="#menu">Explore the menu <span>-></span></a><a class="text-button" href="#reserve">Find your table</a></div>
+        <div class="hero-note"><span class="pulse"></span><span>Open today until 23:00</span><span class="dot">•</span><a href="https://wa.me/257798904755" target="_blank" rel="noreferrer">Free delivery on WhatsApp</a></div>
+      </div>
+      <div class="hero-stamp"><strong>04</strong><span>ways to<br>feel good</span></div>
+    </section>
+
+    <section class="intro-band" id="experiences">
+      <div><p class="eyebrow">More than a meal</p><h2>Your kind of place.</h2></div>
+      <p>Come for the food. Stay for the pool table, the big screen, the soft lighting, or simply a comfortable corner and a familiar plate.</p>
+    </section>
+
+    <section class="experience-grid">
+      <article class="experience-card food-card"><span class="card-number">01</span><div><h3>Everyday<br>eating</h3><p>Fresh plates, generous portions, no fuss.</p><a href="#menu">See the menu <span>-></span></a></div></article>
+      <article class="experience-card date-card"><span class="card-number">02</span><div><h3>Date<br>vibes</h3><p>Low lights, good playlists, better company.</p><a href="#reserve">Book a table <span>-></span></a></div></article>
+      <article class="experience-card play-card"><span class="card-number">03</span><div><h3>Play &<br>watch</h3><p>Pool, movies, and a little healthy competition.</p><a href="#reserve">Plan an evening <span>-></span></a></div></article>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><div><p class="eyebrow">Made for sharing</p><h2>Something for everyone.</h2></div><div class="menu-tabs"><button class="tab active" data-category="all">All</button><button class="tab" data-category="food">Food</button><button class="tab" data-category="drink">Drinks</button></div></div>
+      <div class="menu-grid" id="menu-grid"><div class="loading">Loading the good stuff...</div></div>
+    </section>
+
+    <section class="reservation-section" id="reserve">
+      <div class="reservation-copy"><p class="eyebrow">Make it yours</p><h2>Put something good<br>on the calendar.</h2><p>Reserve a relaxed table, set up a date, or make a night of pool and movies. We will have the space ready.</p><a class="phone-call" href="tel:0798904755"><span>Call or WhatsApp</span><strong>0798 904 755</strong></a></div>
+      <form class="reservation-form" id="reservation-form"><div class="form-heading"><span>01 / reservation</span><span id="auth-status">Sign in to reserve</span></div><label>Date and time<input name="reservation_at" type="datetime-local" required></label><div class="form-row"><label>Guests<select name="guests"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label><label>Experience<select name="experience"><option value="restaurant">Dinner table</option><option value="date">Date vibes</option><option value="pool">Pool table</option><option value="movie">Movie night</option></select></label></div><label>Notes<textarea name="notes" rows="3" placeholder="Anything we should prepare?"></textarea></label><button class="primary-button full-width" type="submit">Request reservation <span>-></span></button><p class="form-message" id="reservation-message"></p></form>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">FG</span><span>feel good</span></div><p>Good food, easy energy, and room for everyone.</p><a href="tel:0798904755">0798 904 755</a></footer>
+
+  <dialog id="auth-dialog"><button class="dialog-close" id="close-dialog" aria-label="Close">x</button><p class="eyebrow">Welcome in</p><h2 id="auth-title">Sign in</h2><form id="auth-form"><label>Name<input name="name" autocomplete="name"></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" minlength="8" required></label><label class="phone-field">Phone<input name="phone" type="tel"></label><button class="primary-button full-width" type="submit" id="auth-submit">Sign in <span>-></span></button></form><button class="switch-auth" id="switch-auth">Need an account? Create one</button><p class="form-message" id="auth-message"></p></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
