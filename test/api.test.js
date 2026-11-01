@@ -36,7 +36,7 @@ test('public restaurant and menu endpoints respond', async () => {
   assert.ok(body.items.length > 0);
   assert.ok(body.items.every((item) => item.category === 'food'));
 });
-
+//just for testing 
 test('customer can register, authenticate, and place an order', async () => {
   const email = `customer-${Date.now()}@example.com`;
   const registration = await request('/api/auth/register', {
